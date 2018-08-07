@@ -1,5 +1,5 @@
 from django.contrib import admin
-from intake.models import Comment, Grade
+from blog.models import Comment
 
 # Register your models here.
 @admin.register(Comment)
