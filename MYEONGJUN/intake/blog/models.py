@@ -10,4 +10,4 @@ class Comment(models.Model):
 
 
 #class Grade(models.Model):
- # Product = models.OneToOneField(Product, on_delete=models.cascade)
+ # Product = models.OneToOneField(Product, on_delete=models.cascade)    
