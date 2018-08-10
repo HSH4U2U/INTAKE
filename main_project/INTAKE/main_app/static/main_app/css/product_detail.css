@@ -1,0 +1,186 @@
+
+h4 {
+	font-weight: 200;
+	margin-left: 80px;}
+
+
+div{
+	background-color: gray;
+	background-color: rgba( 250, 249, 249, 0.9 );
+	padding-top: 20px;
+	padding-bottom: 100px;
+	border-bottom: 1px solid lightgray;
+	border-top: 1px solid lightgray;
+	
+}
+
+
+
+
+
+.img1{
+	float: left;
+	display:inline;
+	margin-top: 30px;
+	margin-left: 80px;
+	position: relative;
+	border: 1px solid lightgray;
+}
+
+p.imgset{
+	float: left;
+	display: inline-block;
+	}
+
+
+.img2{
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 15px;
+	border: 1px solid lightgray;
+}
+.img3{
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 140px;
+	border: 1px solid lightgray;
+}
+.img4{
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 265px;
+	border: 1px solid lightgray;
+}
+
+
+.line{
+	position: absolute;
+	width: 1px;
+	height: 476px;
+	margin-left: 170px;
+	margin-top: 15px;
+	background-color: lightgray;
+}
+
+p.textset{
+	display: inline;
+	margin-left: 200px;
+	line-height: 300%;
+}
+
+
+li{
+	list-style: none;
+}
+
+.headd{
+	color: lightgray;
+	width: 200px;
+	display: inline-block;
+	margin-left: 200px;
+}
+
+.orderr{
+	color: black;
+	width: 200px;
+	display: inline-block;
+	margin-left: 200px;
+}
+
+
+.inorder{
+	padding-left: 200px;
+	display: inline-block;
+}
+
+
+hr.divide{
+	border: solid lightgray;
+	border-width: 1px 0 0; 
+	width:567px;
+
+}
+
+
+hr.divide02{
+	border: solid lightgray;
+	border-width: 1px 0 0;
+	width: 100%;
+}
+
+
+.quantity{
+	width: 300px;
+}
+
+
+
+.sns1{
+	display: inline;
+	position: absolute;
+	margin-left: 40px; 
+	margin-top: 10px;
+}
+
+
+.sns2{
+	display: inline;
+	position: absolute;
+	margin-left: 90px;
+	margin-top: 11px;
+}
+
+.line2{
+	display: inline;
+	position: absolute;
+	margin-top: 10px;
+	width: 1px;
+	height: 25px;
+	margin-left: 70px;
+}
+
+.imgset2{
+	display: block;
+	text-align: center;
+	margin-top: 50px;
+}
+
+
+p.bigmenui{
+	margin-left: 40px;
+	border: 1px solid lightgray;
+}
+
+
+.menui{
+	margin-left: 40px;
+	display: inline-block;
+	width: 160px;
+	height: 10px;
+	text-align: center;
+}
+
+.firstlow{
+	font-size: 30px;
+	text-align: center;
+	line-height: 20%
+}
+.secondlow{
+	font-size: 19px;
+	text-align: center;
+	line-height: 30%;
+}
+.thirdlow{
+	font-size:19px;
+	text-align: center;
+	line-height: 30%;
+}
+.review{
+	border: 1px solid orange;
+	width: 200px;
+	height: 30px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 10px;
+}

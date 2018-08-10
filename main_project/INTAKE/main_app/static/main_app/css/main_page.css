@@ -5,94 +5,11 @@
   padding:0;
 }
 
-body {
-
-}
-
 .helper {
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
-
-/*위 3줄 + nav_bar*/
-.head {
-
-}
-
-/*첫 줄*/
-.login_bar {
-  font-size: 6px;
-  color: #58595B;
-  height: 20px;
-  line-height: 20px;
-  border-bottom: #58595B .1px solid;
-  padding: 0 10%;
-}
-
-.login_bar ul {
-  float: right;
-  display: inline-block;
-}
-
-.login_bar li {
-  display: inline;
-  margin-left: 8px;
-}
-
-.login_bar li:hover {
-  color: black;
-  font-weight: bolder;
-}
-
-/*둘째 줄*/
-.menu_bar{
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10%;
-  height: 40px;
-  border-bottom: #58595B .1px solid;
-}
-
-.menu_bar ul {
-  flex-grow: 1;
-  flex-basis: 0;
-  font-size: 8px;
-  font-weight: bolder;
-}
-
-.menu_bar ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-
-.menu_bar_logo {
-  flex-basis: 0;
-  flex-grow: 1;
-  text-align: center;
-  height: 40px;
-}
-
-.menu_bar_logo img {
-  vertical-align: middle;
-}
-
-.search {
-  background-color: orange;
-  flex-grow: 1;
-  flex-basis: 0;
-}
-
-
-/*셋째 줄*/
-.product_bar {
-  background-color: orange;
-  height: 30px;
-}
-
 
 
 /*section*/
@@ -217,15 +134,5 @@ body {
 }
 
 .instagram {
-
-}
-
-
-/*footer*/
-.footer_bar {
-
-}
-
-.company_introduction {
 
 }
