@@ -1,0 +1,84 @@
+body{
+	padding: 0 15%;
+	width: 70%;
+}
+
+.headb{
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	font-size: 40px;
+	/*인테이크 회원가입 패딩, 조절*/
+}
+
+.alert{
+	color: orange;
+	font-size: 22px;
+	text-align: left;
+}
+
+table{
+	border-top: 2px solid black;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td{
+	background-color:rgba( 250, 249, 249, 0.9 );
+	font-size: 13px;
+	border-bottom: 1px solid lightgray;
+	padding: 10px 40px;
+	height: 40px;
+}
+td:nth-child(2n){
+	background-color: transparent;	
+}
+
+.item{
+	width: 100px;
+	border-right: 1px solid lightgray;
+}
+
+input{
+	box-shadow: none;
+	/*그림자 없애기ㅠㅠㅠㅠㅠ*/
+	background-color: rgba( 250, 249, 249, 0.9 );
+	line-height: 20px;
+}
+
+
+.newButton{
+	background-color: black;
+	color: white;
+}
+
+.postzip{
+	width: 100px;
+}
+
+.newButtonZip{
+	background-color: black;
+	color: white;
+	width: 100px;
+}
+
+.explain{
+	color: lightgray;
+}
+
+.submit{
+	background-color: transparent;
+}
+
+.longword{
+	width: 700px;
+}
+
+.last{
+	border: 1px solid orange;
+	color: orange;
+	padding: 10px 40px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
