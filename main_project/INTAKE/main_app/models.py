@@ -6,10 +6,15 @@ from django.urls import reverse
 # Create your models here.
 class Product(models.Model):
     product_name = models.CharField(max_length=20, verbose_name='상품명',)
-    product_price_before = models.CharField(max_length=100, verbose_name='정가',)
-    product_price = models.CharField(max_length=100, verbose_name='가격',)
+    product_price_before = models.IntegerField(verbose_name='정가',)
+    product_price = models.IntegerField(verbose_name='가격',)
     product_register = models.DateTimeField(auto_now_add=True, verbose_name='상품 등록일')
     product_detail = models.TextField(verbose_name='상품 설명')
+
+    # 핳인률 계산
+    def product_sale(self):
+        product_sale = int(100 - 100 * int(self.product_price) / int(self.product_price_before))
+        return product_sale
 
     class Meta:
         ordering = ['-id']
@@ -26,8 +31,8 @@ class Comment(models.Model):
         ('4', '4'),
         ('5', '5'),
     )
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True, verbose_name='작성자')   # Profile의 user와 같은 거?? 따로 부름??
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, blank=True, verbose_name='해당 상품') #blank true 지우기 위 여기 둘 다
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='작성자')   # Profile의 user와 같은 거?? 따로 부름??
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='해당 상품')
     star = models.CharField(max_length=1, choices=STATUS_CHOICES, blank=True, verbose_name='평점')
     content = models.TextField(verbose_name='댓글 내용')
     created_at = models.DateTimeField(auto_now_add=True)

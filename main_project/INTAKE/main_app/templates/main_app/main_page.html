@@ -21,31 +21,34 @@
 
     <div class="product_introduction2">
       <div><span>INTAKE</span><span> </span><span style="font-weight: bold">MEAL</span></div>
-
       <div class="products">
-        <div class="product">
-          <div>
-            <img src="{% static 'main_app/images/product1.jpg' %}">
-          </div>
-          <div>
-            <div class="product_detail_contents">
-            <p>밀스 라이트 로얄밀크티 *7개입</p>
-            <span class="x">17,500원</span><span>16,000원</span>
+        <a href="{% url "main_app:product" pk=1 %}">
+          <div class="product">
+            <div>
+              <img src="{% static 'main_app/images/product1.jpg' %}">
+            </div>
+            <div>
+              <div class="product_detail_contents">
+              <p>밀스 라이트 로얄밀크티 *7개입</p>
+              <span class="x">17,500원</span><span>16,000원</span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="product">
-          <div>
-            <img src="{% static 'main_app/images/product2.jpg' %}">
-          </div>
-          <div>
-            <div class="product_detail_contents">
-            <p>밀스 라이트 로얄밀크티 *7개입</p>
-            <span class="x">17,500원</span><span>16,000원</span>
+        <a href="{% url "main_app:product" pk=2 %}">
+          <div class="product">
+            <div>
+              <img src="{% static 'main_app/images/product2.jpg' %}">
+            </div>
+            <div>
+              <div class="product_detail_contents">
+              <p>밀스 라이트 로얄밀크티 *7개입</p>
+              <span class="x">17,500원</span><span>16,000원</span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
 
         <div class="product">
           <div>
