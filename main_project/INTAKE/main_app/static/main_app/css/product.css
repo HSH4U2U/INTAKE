@@ -1,0 +1,85 @@
+/*전체*/
+*, html {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* relation_bar */
+.relation_bar {
+  height: 35px;
+  padding: 0 15%;
+}
+
+.relation_bar > div {
+  display: inline-block;
+  line-height: 35px;
+  vertical-align: middle;
+	font-size: 10px;
+  color: black;
+}
+
+.relation_bar div a {
+  text-decoration: none;
+  color: black;
+}
+
+/* product */
+.product {
+  display: flex;
+  background-color: #f8f8f8;
+  padding: 20px 15% 60px 15%;
+  height: 400px;
+}
+
+.product_img {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.product_img span {
+  vertical-align: top;
+}
+
+.big_img img {
+  border: #58595B .1px solid;
+  padding: 1px;
+  margin-right: 10px;
+}
+
+.small_img img {
+  border: #58595B .1px solid;
+  padding: 1px;
+  float: right;
+  margin-right: 15%;
+}
+
+.product_txt {
+  flex-grow: 1;
+  flex-basis: 0;
+  border-left: #58595B .1px solid;
+}
+
+
+/* product_detail */
+.product_detail {
+
+}
+
+
+/* comment */
+.comment {
+
+}
+
+
+/* q&a */
+.q\&a {
+
+}

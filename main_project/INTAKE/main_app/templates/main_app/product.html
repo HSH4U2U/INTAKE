@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'main_app/css/product.css' %}">
+
+  <!--relation_var-->
+  <div class="relation_bar">
+    <div>
+      <span><a href="#">Home</a></span>
+      <span>  >  </span>
+      <span><a href="#">밀스</a></span>
+      <span>  >  </span>
+      <span><a href="#">밀스 라이트</a></span>
+    </div>
+  </div>
+
+  <!--product-->
+  <div class="product">
+    <div class="product_img">
+      <span class="big_img">
+        <img src="{% static 'main_app/images/product1.jpg' %}" width="270px">
+      </span>
+      <span class="small_img">
+        <img src="{% static 'main_app/images/product1.jpg' %}" width="90px">
+      </span>
+    </div>
+
+    <div class="product_txt">
+      <div>인테이크</div>
+      <div>밀스 라이트 로얄</div>
+      <div><span>정가</span><span>00000원</span></div>
+      <div><span>인테이크 판매가</span><span>00000 원</span></div>
+      <div><span>배송구분</span><span>배송비 2,500원<30,000원 이상 구매시 무료배송></span></div>
+      <div><span>옵션선택</span><span>input 넣자</span></div>
+      <div><span>000</span><span>개수 계산 하는거</span></div>
+      <div><span>총금액</span><span>00000</span></div>
+      <div class="when">배송 예정일: 00000</div>
+      <div class="select_bar">
+        <span><a>구매하기</a></span>
+        <span><a>장바구니</a></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!--product_detail-->
+  <div class="product_detail">
+    <div style="height: 300px; background-color: orange "></div>
+  </div>
+
+
+  <!--comment-->
+    <table>
+      <form action="" method="POST">
+        {% csrf_token %}
+        <table>{{ form.as_table }}</table>
+        <input type="submit"/>
+      </form>
+    </table>
+
+  <!--q&a-->
+  <div class="q&a"></div>
+
+
+
+
+{% endblock %}

@@ -63,7 +63,7 @@
 }
 
 .product_introduction2 {
-  padding: 0 10%;
+  padding: 0 15%;
 }
 
 .product_introduction2 > div:nth-child(1) {
@@ -124,7 +124,7 @@
 
 /*section2*/
 .movie {
-  padding: 0 10%;
+  padding: 0 15%;
   text-align: center;
 }
 
