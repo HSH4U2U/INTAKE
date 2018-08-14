@@ -19,26 +19,31 @@
   <div class="product">
     <div class="product_img">
       <span class="big_img">
-        <img src="{% static 'main_app/images/product1.jpg' %}" width="270px">
+        <img src="{% static 'main_app/images/product1.jpg' %}" width="300px">
       </span>
       <span class="small_img">
-        <img src="{% static 'main_app/images/product1.jpg' %}" width="90px">
+        <img src="{% static 'main_app/images/product1.jpg' %}" width="80px">
       </span>
     </div>
 
     <div class="product_txt">
       <div>인테이크</div>
       <div>밀스 라이트 로얄</div>
-      <div><span>정가</span><span>{{ product.product_price_before }}원</span></div>
-      <div><span>인테이크 판매가</span><span>{{ product.product_price }}원</span><span>{{ product.product_sale }}% 할인</span></div>
-      <div><span>배송구분</span><span>배송비 2,500원<30,000원 이상 구매시 무료배송></span></div>
-      <div><span>옵션선택</span><span>input 넣자</span></div>
-      <div><span>000</span><span>개수 계산 하는거</span></div>
-      <div><span>총금액</span><span>00000</span></div>
-      <div class="when">배송 예정일: 00000</div>
+
+      <table>
+        <tr><td>정가</td><td>{{ product.product_price_before }}원</td></tr>
+        <tr><td>인테이크 판매가</td><td><span>{{ product.product_price }}원</span><span>{{ product.product_sale }}% 할인</span></td></tr>
+        <tr><td>배송구분</td><td>배송비 2,500원<30,000원 이상 구매시 무료배송></td></tr>
+        <tr><td>옵션선택</td><td>input 넣자</td></tr>
+        <tr><td>000</td><td>개수 계산 하는거</td></tr>
+        <tr><td>총금액</td><td>00000</td></tr>
+      </table>
+        <div class="when">배송 예정일: 00000</div>
+
+
       <div class="select_bar">
-        <span><a>구매하기</a></span>
-        <span><a>장바구니</a></span>
+        <span><a><img src="{% static 'main_app/images/buy_btn.jpg' %}" width="150"></a></span>
+        <span><a><img src="{% static 'main_app/images/cart_btn.jpg' %}" width="150"></a></span>
         <span></span>
         <span></span>
       </div>
@@ -53,6 +58,7 @@
 
 
   <!--comment-->
+  <div>
     <table>
       <form action="" method="POST">
         {% csrf_token %}
@@ -60,6 +66,9 @@
         <input type="submit"/>
       </form>
     </table>
+  </div>
+
+
 
   <!--q&a-->
   <div class="q&a"></div>

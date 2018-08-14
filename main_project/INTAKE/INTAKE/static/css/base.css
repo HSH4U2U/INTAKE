@@ -80,9 +80,29 @@ body {
 }
 
 .search {
-  background-color: orange;
   flex-grow: 1;
   flex-basis: 0;
+}
+
+.search > div {
+  float: right;
+}
+
+.search_content {
+  background-color: #f8f8f8;
+  border: #DCDCDC .1px solid;
+  height: 24px;
+  width: 170px;
+  font-size: 8px;
+  padding: 5px 0px 5px 5px;
+}
+
+.search_btn {
+  background-color: white;
+  border: none;
+  margin-left: 5px;
+  font-size: 8px;
+  font-weight: bold;
 }
 
 

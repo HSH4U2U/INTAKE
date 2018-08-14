@@ -27,7 +27,17 @@
         <li>Best</li>
       </ul>
       <div class="menu_bar_logo"><div class="helper"></div><img src="{% static 'images/logo.png' %}" width="80"></div>
-      <div class="search">b</div>   <!--검색창-->
+
+      <!--검색창-->
+      <div class="search">
+        <div>
+          <form action="">        <!--get으로 받을 예정-->
+            <input class="search_content" type="search" name="search" placeholder="검색어를 입력하세요.">
+            <input class="search_btn" type="submit" value="SEARCH">
+          </form>
+        </div>
+
+      </div>
     </div>
 
     <div class="product_bar">
