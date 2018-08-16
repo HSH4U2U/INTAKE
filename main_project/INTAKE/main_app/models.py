@@ -6,6 +6,7 @@ from django.urls import reverse
 # Create your models here.
 class Product(models.Model):
     product_name = models.CharField(max_length=20, verbose_name='상품명',)
+    product_image = models.ImageField(verbose_name='상품 사진',)
     product_price_before = models.IntegerField(verbose_name='정가',)
     product_price = models.IntegerField(verbose_name='가격',)
     product_register = models.DateTimeField(auto_now_add=True, verbose_name='상품 등록일')
@@ -24,16 +25,23 @@ class Product(models.Model):
 
 
 class Comment(models.Model):
-    STATUS_CHOICES = (
-        ('1', '1'),
-        ('2', '2'),
-        ('3', '3'),
-        ('4', '4'),
-        ('5', '5'),
-    )
+
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='작성자')   # Profile의 user와 같은 거?? 따로 부름??
     product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='해당 상품')
-    star = models.CharField(max_length=1, choices=STATUS_CHOICES, blank=True, verbose_name='평점')
+
+    # star 선택지로
+    STATUS_CHOICES = (
+        ('1', '★☆☆☆☆'),
+        ('2', '★★☆☆☆'),
+        ('3', '★★★☆☆'),
+        ('4', '★★★★☆'),
+        ('5', '★★★★★'),
+    )
+    star = models.CharField(max_length=1, choices=STATUS_CHOICES, verbose_name='평점')
+
+    # star 숫자로
+    # new_star = models.IntegerField(blank=True, verbose_name='별점')
+
     content = models.TextField(verbose_name='댓글 내용')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -41,8 +49,10 @@ class Comment(models.Model):
     class Meta:
         ordering = ['-id']
 
+
     def get_absolute_url(self):
         return reverse('main_app:product')
+
 
 
     # def __str__(self):

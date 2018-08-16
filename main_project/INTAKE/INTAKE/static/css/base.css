@@ -9,6 +9,11 @@ body {
 
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .helper {
   display: inline-block;
   height: 100%;
@@ -44,6 +49,20 @@ body {
   color: black;
   font-weight: bolder;
 }
+
+.login_bar form {
+  display: inline;
+}
+
+
+.login_bar button {
+  border: none;
+  background-color: white;
+  font-size: 6px;
+  padding: 0;
+}
+
+
 
 /*둘째 줄*/
 .menu_bar{

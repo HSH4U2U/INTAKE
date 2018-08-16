@@ -6,7 +6,7 @@ from .models import Product, Comment
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['id', 'product_name', 'product_price_before', 'product_price', 'product_register', 'product_detail', ]
+    list_display = ['id', 'product_name', 'product_image', 'product_price_before', 'product_price', 'product_register', 'product_detail', ]
 
 
 @admin.register(Comment)
