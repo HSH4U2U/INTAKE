@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>INTAKE | 인테이크</title>
+  <link rel="stylesheet" href="inmainalter.css">
+  <link rel="stylesheet" href="iimage/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  
+
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+        auto: true,
+        speed: 500,
+        pause: 2000,
+        mode:'horizontal',
+        infiniteLoop: true,
+        autoHover: true,
+        minSlides: 1,
+        maxSlides: 1,
+        pager: true,
+        controls: true,
+     });
+
+
+    $('.subslider').bxSlider({
+        slideWidth: 318,
+        slideMargin: 2,
+        auto: true,
+        speed: 500,
+        pause: 2000,
+        mode:'horizontal',
+        infiniteLoop: true,
+        autoHover: true,
+        minSlides: 4,
+        maxSlides: 4,
+        moveSlides: 3,
+        pager: false,
+        controls: true,
+        nexttext: '>',
+        prevText: '<',
+        nextSelector: '#slider-next',
+        prevSelector: '#slider-prev',
+      }); 
+
+
+        // controls=true가 좌우 버튼값이 보이게 하는게 맞는데 
+        // 이유는 모르겠고 그냥 안댐.ㅠㅠㅠㅠ 만약 된다면 nexttext prevtext로 적용할수 있는건지도 모르겠음잘....
+     
+
+    $('#mainslide').bxSlider({
+      nextSelector: '#slider-next',
+      prevSelector: '#slider-prev',
+      nextText: '<img src="iimages/lightarrow.png" %}" />',
+      prevText: '<img src="iimages/leftarrow.png" %}" />'    });
+
+  
+   $(function() {
+   $(window).scroll(function() {
+   var top = $(window).scrollTop();
+   $(".quickbar").animate({"top" : top + 100 + "px"}, 100);
+  });
+  $(".quickbar").click(function() { $("html,body").animate({scrollTop:0}, 10); });
+ });
+ });
+   
+</script>
+
+
+</head>
+
+
+<body>
+  <!-- 위 3줄 + nav_bar -->
+  <div class="head">
+    <div class="login_bar">
+      <ul>
+        <li>Login</li>
+        <li>Join</li>
+        <li>Cart</li>
+        <li>Customer Center</li>
+      </ul>
+    </div>
+     <div class="menu_bar">
+      <ul>
+        <li>About INTAKE</li>
+        <li>Magazine</li>
+        <li>Lab</li>
+        <li>Best</li>
+      </ul>
+      <div class="menu_bar_logo"><div class="helper"></div><img src="iimage/logo.png" width="80"></div>
+      <div class="search">b</div>   <!--검색창-->
+    </div>
+     
+<!-- 여기서부터 맨 위 카테고리 -->
+     <div class="product_bar">
+      <img src="iimage/menu.png" width="30" class="product_bar_image">
+      <ul>
+      <li class="product_category">
+        <a href="#" data-toggle="dropdown" id="menu1">밀스</a>
+          <ul class="product_category_sub">
+            <li><a id="category_sub"><img src="iimage/subimage01.jpg" class="sub_image">밀스드링크</a></li>
+            <li><a id="category_sub"><img src="iimage/subimage02.jpg" class="sub_image">밀스 3.1</a></li>
+            <li><a id="category_sub"><img src="iimage/subimage03.jpg" class="sub_image">밀스 라이트</a></li>
+            <li><a id="category_sub"><img src="iimage/subimage04.jpg" class="sub_image">밀스 브레드</a></li>
+            <li><a id="category_sub"><img src="iimage/subimage05.jpg" class="sub_image">밀스 칩</a></li>
+          </ul>
+        <a href="#" id="menu2">아침간편식</a>
+        <a href="#" id="menu3">간식/음료</a>
+        <a href="#" id="menu4">서플리먼트 </a>
+        <a href="#" id="menu5">다이어트/스포츠</a>
+        <a href="#" id="menu6">이벤트 </a>
+        <a href="#" id="menu7">고객센터</a>
+      </ul>
+   
+
+
+    </div>
+    <!-- section -->
+  <div class="section">
+      <!-- sectoon1 -->
+    <ul class="slider" id="mainslide">
+      <li><img src="iimage/main01.jpg" width="100%"></li>
+      <li><img src="iimage/main02.jpg" width="100%"></li>
+      <li><img src="iimage/main03.jpg" width="100%"></li>
+    </ul>
+
+    <div class="product_introduction1">
+      <div class="helper"></div> <div>
+      <div>Do not eat, Do intake!</div>
+      <div>식사를 연구하다, 인테이크</div>
+      <div>인테이크는 현대인의 식사를 연구하고 솔루션을 제안합니다.</div>
+      </div>
+    </div>
+     <!--그냥 이미지만 따온 부분-->
+    <img class="help_img" src="((이미지 주소 --- 이건 나두 셔도 됩니다 지우셔도 됨))">
+     <div class="product_introduction2">
+      <div><span>INTAKE</span><span> </span><span style="font-weight: bold">MEAL</span></div>
+      <div class="products">
+        <div class="subslider">  
+
+          <!-- <span id="slider-prev"></span> -->
+          <div class="product">
+            <div>
+            <img src="iimage/submenu.jpg">
+            </div>
+            <div class="product_detail_contents">
+            <p>밀스 라이트 로얄밀크티 *7개입</p>
+            <span class="x">17,500원</span><span>16,000원</span>
+            </div>
+            </div>
+      
+
+
+        <div class="product">
+            <div>
+            <img src="iimage/submenu02.jpg">
+            </div>
+            <div class="product_detail_contents">
+            <p>밀스 라이트 로얄밀크티 *7개입</p>
+            <span class="x">17,500원</span><span>16,000원</span>
+            </div>
+            </div>
+      
+
+
+         <div class="product">
+            <div>
+            <img src="iimage/submenu.jpg">
+            </div>
+            <div class="product_detail_contents">
+            <p>밀스 라이트 로얄밀크티 *7개입</p>
+            <span class="x">17,500원</span><span>16,000원</span>
+            </div>
+            </div>
+        
+
+
+         <div class="product">
+            <div>
+            <img src="iimage/submenu02.jpg">
+            </div>
+            <div class="product_detail_contents">
+            <p>밀스 라이트 로얄밀크티 *7개입</p>
+            <span class="x">17,500원</span><span>16,000원</span>
+            </div>
+            </div>
+            
+          <span id="slieder-next"></span>
+
+        </div>
+        <!-- slider닫아주는 div(위) -->
+    </div>
+     <!-- 여기부터는 안 하셔도 됩니다 -->
+{#    <div class="event"></div>#}
+{##}
+{#     <!-- sectoon2 -->#}
+{#    <div class="movie">#}
+{#      <div>#}
+{#        <span>INTAKE</span><span> </span><span style="font-weight: bold">MOVIE</span>#}
+{#      </div>#}
+{#      <div style="background-color: orange; height: 500px"></div>#}
+{#    </div>#}
+{##}
+{#    <div class="notice_magazine_cs-center"></div>#}
+{#    <div class="instagram"></div>#}
+{#    #}
+{#       <!-- footer -->#}
+{#    <div class="footer_bar">#}
+{#      <img src="{% static 'images/footer.jpg' %}" style="width: 100%;">#}
+{#    </div>#}
+{#    <div class="company_introduction"></div>#}
+  </div>
+
+
+<!-- quick bar -->
+  <div class="quickbar">
+    <a href="#" class="quickbar_menu"><img src="iimage/quick01.jpg"></a>
+    <a href="#" class="quickbar_menu"><img src="iimage/quick02.png"></a>
+    <a href="#" class="quickbar_text"> &nbsp;&nbsp;장바구니</a>
+    <a href="#" class="quickbar_menu"><img src="iimage/quick03.jpg"></a>
+    <a href="#" class="quickbar_menu"><img src="iimage/quick04.png"></a>
+  </div>
+
+</body> 
+</div>
+</body>
+</html>
