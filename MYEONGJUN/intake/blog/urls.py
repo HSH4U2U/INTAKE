@@ -2,5 +2,5 @@ from django.urls import path, re_path, include
 
 
 urlpatterns =[
-      #url(r'^$', views.post_list),
+      #path('', views.post_list),
 ]
