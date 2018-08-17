@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
+  {% load mathfilters %}
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'main_app/css/product.css' %}">
 
   <!--relation_var-->
   <div class="relation_bar">
     <div>
-      <span><a href="#">Home</a></span>
+      <span><a href="{% url "main_app:main_page" %}">Home</a></span>
       <span>  >  </span>
       <span><a href="#">밀스</a></span>
       <span>  >  </span>

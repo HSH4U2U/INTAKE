@@ -54,6 +54,10 @@ a {
   display: inline;
 }
 
+.login_bar button:hover {
+  color: black;
+  font-weight: bolder;
+}
 
 .login_bar button {
   border: none;

@@ -1,0 +1,83 @@
+/*전체*/
+*, html {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* relation_bar */
+.relation_bar {
+  height: 35px;
+  margin: 0 15%;
+  border-bottom: #f8f8f8 solid 1px;
+}
+
+.relation_bar > div {
+  display: inline-block;
+  line-height: 35px;
+  vertical-align: middle;
+	font-size: 10px;
+  color: black;
+}
+
+/* title */
+.title {
+  padding: 60px 0 40px 0;
+  text-align: center;
+  font-size: 24px;
+}
+
+
+/* login_box */
+.center {
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.login_box {
+  display: inline-block;
+  padding: 60px 100px;
+  text-align: center;
+  border: black solid 2px;
+  background-color: #f8f8f8;
+}
+
+.login_box div input {
+  height: 35px;
+  width: 270px;
+  padding-left: 10px;
+  border: 1px solid #e7e7e7;
+  outline: none;
+  margin-bottom: 30px;
+  font-size: 10px;
+}
+
+.login_btn {
+  width: 270px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+}
+
+
+.finder {
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.finder span:nth-child(2n) {
+  margin: 0 5px;
+}

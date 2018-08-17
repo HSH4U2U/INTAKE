@@ -7,22 +7,39 @@
   <!--relation_var-->
   <div class="relation_bar">
     <div>
-      <span><a href="#">Home</a></span>
+      <span><a href="{% url "main_app:main_page" %}">Home</a></span>
       <span>  >  </span>
       <span><a href="#">로그인</a></span>
     </div>
   </div>
 
+  <!--title-->
+  <div class="title">INTAKE <b>로그인</b></div>
 
-  <div class="">
-    <table>
+  <!--login_box-->
+  <div class="center">
+    <div class="login_box">
       <form action="" method="POST">
         {% csrf_token %}
-        <table>{{ form.as_table }}</table>
-        <input type="submit"/>
+        <div class="id">
+          <input type="text" name="username" placeholder="회원 ID"
+                 required />
+        </div>
+        <div class="password">
+          <input type="password" name="password" placeholder="비밀번호"
+                 required/>
+        </div>
+        <button class="login_btn" type="submit">로그인</button>
       </form>
-    </table>
-  </div>
+    </div>
 
+    <div class="finder">
+      <span><a href="#">아이디 찾기</a></span>
+      <span>|</span>
+      <span><a href="#">비밀번호 찾기</a></span>
+      <span>|</span>
+      <span><a href="{% url "accounts:signup" %}">회원가입</a></span>
+    </div>
+  </div>
 
 {% endblock %}
