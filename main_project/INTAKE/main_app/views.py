@@ -31,16 +31,17 @@ def product(request, pk):
     product = get_object_or_404(Product, pk=pk)
 
     # 후기 등록 시스템 구현(상품 보여주는 페이지와 같은 곳에서 보이게 구현함)
-    form = CommentForm(request.POST, request.FILES)
+    form = CommentForm(request.POST, request.FILES or None)
     if request.method == 'POST':
-
-        # 자동으로 author와 product 지정
-        # form.author = request.user
-        # form.product = product
 
         # 로그인 되었을 때만 쓸 수 있게 할 생각
         if request.user.is_authenticated:
             if form.is_valid():
+
+                # 자동으로 author와 product 지정
+                form.author = request.user
+                form.product = product
+
                 comment = form.save()
                 return redirect(comment)        #다시 상품 해당 페이지로 가야함
             else:

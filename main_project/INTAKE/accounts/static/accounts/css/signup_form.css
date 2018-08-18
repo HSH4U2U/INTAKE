@@ -1,0 +1,154 @@
+/*전체*/
+*, html {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* relation_bar */
+.relation_bar {
+  height: 35px;
+  margin: 0 15%;
+  border-bottom: #f8f8f8 solid 1px;
+}
+
+.relation_bar > div {
+  display: inline-block;
+  line-height: 35px;
+  vertical-align: middle;
+	font-size: 10px;
+  color: black;
+}
+
+/* title */
+.title {
+  padding: 60px 0 30px 0;
+  text-align: center;
+  font-size: 24px;
+}
+
+/*signup*/
+.signup {
+  padding: 0 15%;
+}
+
+.headb{
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	font-size: 40px;
+	/*인테이크 회원가입 패딩, 조절*/
+}
+
+.alert{
+	color: orangered;
+	font-size: 14px;
+	text-align: left;
+}
+
+table{
+	border-top: 2px solid black;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td{
+	background-color:rgba( 250, 249, 249, 0.9 );
+	font-size: 13px;
+	border-bottom: 1px solid lightgray;
+	padding: 15px 30px;
+	height: 40px;
+}
+
+td:nth-child(2n){
+	background-color: transparent;
+}
+
+.item{
+	border-right: 1px solid lightgray;
+  width: 160px;
+}
+
+.input_txt input{
+	background-color: rgba( 250, 249, 249, 0.9 );
+  height: 25px;
+  width: 160px;
+  padding-left: 3px;
+  border: 1px solid #e7e7e7;
+  outline: none;
+  font-size: 8px;
+}
+
+input:not(.input_txt) {
+  background-color: rgba( 250, 249, 249, 0.9 );
+}
+
+
+.newButton{
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 8px;
+  height: 25px;
+  padding: 0 10px;
+  margin-left: 10px;
+}
+
+.postzip{
+	width: 100px;
+}
+
+.newButtonZip{
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 8px;
+  height: 25px;
+  padding: 0 15px;
+  margin-left: 10px;
+}
+
+.explain{
+	color: gray;
+  font-size: 8px;
+  margin-top: 10px;
+}
+
+.submit{
+	background-color: transparent;
+}
+
+.longword{
+	width: 700px;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.join_btn {
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+	border: 1px solid orange;
+	padding: 10px 40px;
+  background-color: white;
+  color: orange;
+}
+
+.join_btn:hover {
+  background-color: orange;
+  color: white;
+}
