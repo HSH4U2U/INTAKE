@@ -31,13 +31,13 @@ class Comment(models.Model):
 
     # star 선택지로
     STATUS_CHOICES = (
-        ('1', '★☆☆☆☆'),
-        ('2', '★★☆☆☆'),
-        ('3', '★★★☆☆'),
-        ('4', '★★★★☆'),
-        ('5', '★★★★★'),
+        (1, '★☆☆☆☆'),
+        (2, '★★☆☆☆'),
+        (3, '★★★☆☆'),
+        (4, '★★★★☆'),
+        (5, '★★★★★'),
     )
-    star = models.CharField(max_length=1, choices=STATUS_CHOICES, verbose_name='평점')
+    star = models.IntegerField(max_length=1, choices=STATUS_CHOICES, verbose_name='평점')
 
     # star 숫자로
     # new_star = models.IntegerField(blank=True, verbose_name='별점')
@@ -49,9 +49,9 @@ class Comment(models.Model):
     class Meta:
         ordering = ['-id']
 
-
+    # comment 쓰고 다시 그 페이지로
     def get_absolute_url(self):
-        return reverse('main_app:product')
+        return reverse('main_app:product', args=[self.product.id])
 
 
 

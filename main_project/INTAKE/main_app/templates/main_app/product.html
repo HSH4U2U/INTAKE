@@ -89,13 +89,13 @@
 
   <!--make_comment-->
   <div class="make_comment">
-    <table>
-      <form action="" method="POST">
-        {% csrf_token %}
-        <table>{{ form.as_table }}</table>
-        <input type="submit"/>
-      </form>
-    </table>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div class="post_title"><i>COMMENT</i></div>
+      <div class="star"><span>별점</span><span>{{ form.star }}</span></div>
+      <div class="content"><span>내용</span><span>{{ form.content }}</span></div>
+      <div class="center"><input class="posting" type="submit"/></div>
+    </form>
   </div>
 
 

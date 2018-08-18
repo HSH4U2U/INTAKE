@@ -27,7 +27,7 @@
       <table class="input_txt">
         <tr>
           <td class="item">아이디<font color=orangered>*</font></td>
-          <td class="submit">{{ form.username }}</td>
+          <td class="submit">{{ form.username }}</td>{% if messages.password %}<td>{{ messages.password }}</td>{% endif %}
         </tr>
 
         <tr>
@@ -118,5 +118,11 @@
       </div>
     </form>
   </div>
+
+
+    <tabel>
+      {{ form.as_table }}
+    </tabel>
+
 
 {% endblock %}

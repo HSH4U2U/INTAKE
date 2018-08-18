@@ -192,7 +192,67 @@ a {
 
 /* make_comment */
 .make_comment {
+  margin: 50px 15% 100px 15%;
+  font-size: 20px;
+}
 
+.post_title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.make_comment div span:first-child {
+  padding: 0 15px 0 15px;
+  font-weight: bold;
+}
+
+.make_comment div span:last-child {
+  padding-left: 15px;
+}
+
+.star {
+  padding-bottom: 10px;
+  border-bottom: #DCDCDC solid 0.1px;
+}
+
+.star select {
+  color: orange;
+}
+
+.content {
+  padding-top: 10px;
+}
+
+.content span {
+  vertical-align: top;
+}
+
+.content textarea {
+  padding: 10px;
+  width: 90%;
+  height: 100px;
+}
+
+.center {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.posting {
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+	border: 1px solid orange;
+	padding: 10px 40px;
+  background-color: white;
+  color: orange;
+}
+
+.posting:hover {
+  background-color: orange;
+  color: white;
 }
 
 
