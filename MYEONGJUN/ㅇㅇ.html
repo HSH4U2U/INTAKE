@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/signup_form.css' %}">
+
+
+  <!--relation_var-->
+  <div class="relation_bar">
+    <div>
+      <span><a href="{% url "main_app:main_page" %}">Home</a></span>
+      <span>  >  </span>
+      <span><a href="#">회원가입</a></span>
+    </div>
+  </div>
+
+  <!--title-->
+  <div class="title">INTAKE <b>회원가입</b></div>
+
+  <!--signup-->
+
+  <div class="signup">
+  	<a class="alert">*필수입력항목</a>
+	  <br><br>
+    <form action="" method="POST">
+    {% csrf_token %}
+      <table class="input_txt">
+        <tr>
+          <td class="item">아이디<font color=orangered>*</font></td>
+          <td class="submit">{{ form.username }}</td>
+        </tr>
+
+        <tr>
+          <td class="item">이메일<font color=orangered>*</font></td>
+          <td class="submit">{{ form.email }}</td>
+        </tr>
+
+        <tr>
+          <td class="item">비밀번호<font color=orangered>*</font></td>
+          <td class="submit">{{ form.password1 }}</td>
+        </tr>
+
+        <tr>
+          <td class="item">비밀번호 확인<font color=orangered>*</font></td>
+          <td class="submit">{{ form.password2 }}
+          <br><div class="explain">5~15자리의 비밀번호를 입력해주세요.
+          <br>영문 대소문자를 구분하며, 특수문자나 숫자를 혼합하는 것을 권장합니다.</div></td>
+        </tr>
+
+        <tr>
+          <td class="item">휴대폰번호<font color=orangered>*</font></td>
+          <td class="submit">{{ form.phone }}<button class="newButton">인증</button></td>
+        </tr>
+
+        <tr>
+          <td class="item">인증번호<font color=orangered>*</font></td>
+          <td class="submit"><input type="text"><button class="newButton">확인</button></td>
+        </tr>
+
+        <tr>
+          <td class="item" rowspan="3">주소<font color=orangered>*</font></td>
+          <td class="submit">{{ form.address }}<button class="newButtonZip">우편번호 검색</button></td>
+        </tr>
+
+        <tr>
+          <td class="submit"><input type="text" placeholder="  검색 버튼을 눌러 주소를 검색하세요." class="longword"></td>
+        </tr>
+
+        <tr>
+          <td class="submit"><input type="text" placeholder="  상세주소를 입력해주세요." class="longword"></td>
+        </tr>
+      </table>
+
+      <br>
+      <br>
+      <br>
+      <a class="alert">*선택입력항목</a>
+      <br><br>
+      <table>
+        <tr>
+          <td class="item">생년 월일</td>
+          <td class="submit input_txt">
+            <input list="order" class="quantity" spaceholder="년">
+              <datalist id="order">
+              <option value="1994">
+              <option value="1993">
+              <option value="1995">
+              </datalist>
+            <input list="order2" class="quantity" spaceholder="년">
+              <datalist id="order2">
+              <option value="5">
+              <option value="6">
+              <option value="7">
+              </datalist>
+            <input list="order3" class="quantity" spaceholder="년">
+              <datalist id="order3">
+              <option value="31">
+              <option value="30">
+              <option value="29">
+              </datalist>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="item">성별</td>
+          <td class="submit"><input type="radio">남자 <input type="radio">여자</td>
+        </tr>
+
+        <tr>
+          <td class="item">가입경로</td>
+          <td class="submit"><input type="radio">SNS&nbsp;&nbsp;<input type="radio">온라인 쇼핑몰&nbsp;&nbsp;<input type="radio">오프라인 매장&nbsp;&nbsp;<input type="radio">라디오 광고&nbsp;&nbsp;<input type="radio">&nbsp;&nbsp;기타</td>
+        </tr>
+      </table>
+
+      <br><br><br>
+      <div class="center">
+        <button class="join_btn" type="submit">화원가입하기</button>
+      </div>
+    </form>
+  </div>
+
+{% endblock %}
+
