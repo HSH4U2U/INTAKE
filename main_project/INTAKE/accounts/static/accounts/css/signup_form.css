@@ -129,6 +129,11 @@ input:not(.input_txt) {
 	background-color: transparent;
 }
 
+/* html에서 input tag 안에 required 써서 가능 */
+/*.submit input:invalid {*/
+  /*border: 1px solid red;*/
+/*}*/
+
 .longword{
 	width: 700px;
 }

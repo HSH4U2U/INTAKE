@@ -48,8 +48,9 @@
       <!--검색창-->
       <div class="search">
         <div>
-          <form action="">        <!--get으로 받을 예정-->
-            <input class="search_content" type="search" name="search" placeholder="검색어를 입력하세요.">
+          <form action="" method="GET">        <!--get으로 받을 예정-->
+            <input class="search_content" type="search" name="search"
+                   placeholder="검색어를 입력하세요." value="{{ request.GET.search }}">
             <input class="search_btn" type="submit" value="SEARCH">
           </form>
         </div>

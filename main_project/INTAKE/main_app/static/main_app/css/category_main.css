@@ -1,0 +1,72 @@
+/*전체*/
+*, html {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* relation_bar */
+.relation_bar {
+  height: 35px;
+  padding: 0 15%;
+  margin-bottom: 30px;
+}
+
+.relation_bar > div {
+  display: inline-block;
+  line-height: 35px;
+  vertical-align: middle;
+	font-size: 10px;
+  color: black;
+  width: 100%;
+  border-bottom: #DCDCDC .1px solid;
+}
+
+.relation_bar div a {
+  text-decoration: none;
+  color: black;
+}
+
+/* title */
+.title {
+  text-align: center;
+  padding: 0 15%;
+  margin: 30px 0 40px 0;
+}
+
+.title > div:first-child {
+  font-size: 30px;
+}
+
+
+/* categorys */
+.categorys {
+  padding: 0 15%;
+  margin-bottom: 700px;
+}
+
+.category {
+  float: left;
+  width: 23%;
+  background-color: #f8f8f8;
+  padding: 85px 1px;
+  border: #DCDCDC .1px solid;
+  margin: 20px;
+}
+
+.category_title {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+}

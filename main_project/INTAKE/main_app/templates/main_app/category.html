@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'main_app/css/category.css' %}">
+
+  <!--relation_var-->
+  {% if category %}
+  <div class="relation_bar">
+    <div>
+      <span><a href="{% url "main_app:main_page" %}">Home</a></span>
+      <span>  >  </span>
+      <span><a href="{% url "main_app:category_main" %}">Category</a></span>
+      <span>  >  </span>
+      <span><a href="#">{{ category }}</a></span>
+    </div>
+  </div>
+  {% endif %}
+
+  <!--category-title-->
+  <div class="category_title">
+    {% if category %}
+      <div>밀스 라이트 / <b>MEALS LIGHT</b></div>
+      <div>input/ 선택하면 해당 카테고리로</div>
+    {% else %}
+      <div style="margin-top: 50px"><b style="color: orange">"{{ search_term }}"</b>의 검색 결과</div><div></div>
+    {% endif %}
+  </div>
+
+    <div class="products">
+      {% for product in products %}
+        <a href="{% url "main_app:product" pk=product.pk %}">
+          <div class="product">
+            <div>
+              <img src="{{ product.product_image.url }}">
+            </div>
+            <div>
+              <div class="product_detail_contents">
+              <p>{{ product.product_name }}</p>
+              <span class="x">{{ product.product_price_before }}원</span><span>{{ product.product_price }}원</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+
+
+{% endblock %}

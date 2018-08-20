@@ -18,6 +18,8 @@ def signup(request):
             return redirect('main_app:main_page')
         else:
             # 오류 검사
+            # form.errors
+            
             # username = form.cleaned_data.get('username')
             # email = form.cleaned_data.get()
 

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'main_app/css/category_main.css' %}">
+
+  <!--relation_var-->
+  <div class="relation_bar">
+    <div>
+      <span><a href="{% url "main_app:main_page" %}">Home</a></span>
+      <span>  >  </span>
+      <span><a href="#">Category</a></span>
+    </div>
+  </div>
+
+  <!--title-->
+  <div class="title">
+    <div><b>Category</b></div>
+  </div>
+
+  <div class="categorys">
+    {% for category in categorys %}
+      <a href="{% url "main_app:category" pk=category.pk %}">
+        <div class="category">
+          <div class="category_title">{{ category }}</div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+
+
+{% endblock %}

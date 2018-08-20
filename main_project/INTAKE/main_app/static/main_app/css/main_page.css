@@ -57,7 +57,7 @@ a {
 }
 
 .product_introduction1 div div:nth-child(3) {
-  color: #58595B;
+  color: #DCDCDC;
   font-size: 10px;
   margin-bottom: 10px;
 }
@@ -85,7 +85,7 @@ a {
 .product {
   flex-grow: 1;
   padding: 1px;
-  border: #58595B .1px solid;
+  border: #DCDCDC .1px solid;
 }
 
 .product:nth-child(-n+3) {
