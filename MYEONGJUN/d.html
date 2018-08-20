@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>INTAKE | 인테이크 </title>
+  <style>
+
+  </style>
+</head>
+	<link rel="stylesheet" href="newjoin.css">
+<body>
+	<div class="headb">INTAKE <b>회원가입</b></div>
+	<a class="alert">*필수입력항목</a>
+
+	<br><br>
+	<table>
+    <tr>
+      <td class="item">이름<font color=orange>*</font></td>
+      <td class="submit"><input type="text" placeholder="  이름"></td>
+    </tr>
+
+    <tr>
+      <td class="item">아이디(이메일)<font color=orange>*</font></td>
+      <td class="submit"><input type="text" placeholder="  아이디(이메일)"</td>
+    </tr>
+
+    <tr>
+      <td class="item">비밀번호<font color=orange>*</font></td>
+      <td class="submit"><input type="text" placeholder="  비밀번호"></td>
+    </tr>
+
+    <tr>
+      <td class="item">비밀번호 확인<font color=orange>*</font></td>
+      <td class="submit"><input type="text" placeholder="  비밀번호 확인">
+      <br><div class="explain">5~15자리의 비밀번호를 입력해주세요.
+      <br>영문 대소문자를 구분하며, 특수문자나 숫자를 혼합하는 것을 권장합니다.</div></td>
+    </tr>
+
+    <tr>
+      <td class="item">휴대폰번호<font color=orange>*</font></td>
+      <td class="submit"><input type="text">&nbsp; <button class="newButton">인증</button></td>
+    </tr>
+
+    <tr>
+      <td class="item">인증번호<font color=orange>*</font></td>
+      <td class="submit"><input type="text">&nbsp; <button class="newButton">확인</button></td>
+    </tr>
+
+    <tr>
+      <td class="item" rowspan="3">주소<font color=orange>*</font></td>
+      <td class="submit"><input type="text" class="postzip">&nbsp; <button class="newButtonZip">우편번호 검색</button></td>
+    </tr>
+
+    <tr>
+      <td class="submit"><input type="text" placeholder="  검색 버튼을 눌러 주소를 검색하세요." class="longword"></td>
+    </tr>
+
+    <tr>
+      <td class="submit"><input type="text" placeholder="  상세주소를 입력해주세요." class="longword"></td>
+    </tr>
+
+
+	</table>
+	<br>
+	<br>
+	<br>
+
+
+
+
+	<a class="alert">*선택입력항목</a>
+
+	<br><br>
+	<table>
+    <tr>
+      <td class="item">생년 월일</td>
+      <td class="submit">
+        <input list="order" class="quantity" spaceholder="년">
+          <datalist id="order">
+          <option value="1994">
+          <option value="1993">
+          <option value="1995">
+          </datalist>
+        <input list="order2" class="quantity" spaceholder="년">
+          <datalist id="order2">
+          <option value="5">
+          <option value="6">
+          <option value="7">
+          </datalist>
+        <input list="order3" class="quantity" spaceholder="년">
+          <datalist id="order3">
+          <option value="31">
+          <option value="30">
+          <option value="29">
+          </datalist>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="item">성별</td>
+      <td class="submit"><input type="radio">남자 <input type="radio">여자</td>
+    </tr>
+
+
+    <tr>
+      <td class="item">가입경로</td>
+      <td class="submit"><input type="radio">SNS&nbsp;&nbsp;<input type="radio">온라인 쇼핑몰&nbsp;&nbsp;<input type="radio">오프라인 매장&nbsp;&nbsp;<input type="radio">라디오 광고&nbsp;&nbsp;<input type="radio">&nbsp;&nbsp;기타</td>
+    </tr>
+  </table>
+
+	<table>
+    <br>
+    <br>
+    -선택 항목 기입 시 항목 1개당 100 포인트를 지급합니다(주소제외)
+    <br><br>
+    <input type="checkbox">모두동의합니다.
+    <br><br>
+    <input type="checkbox">이용약관에 동의합니다.
+    <br><br>
+    <input type="checkbox">개인정보 취급방침에 동의합니다.
+    <br><br>
+    <input type="checkbox">이메일 수신동의
+    <br><br>
+    <input type="checkbox">SMS 수신동의
+  </table>
+
+	<br><br><br>
+    <a class="last">회원가입하기</a>
