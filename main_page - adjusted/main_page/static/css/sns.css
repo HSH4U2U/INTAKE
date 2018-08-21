@@ -1,0 +1,35 @@
+
+.instagram_intake{
+    text-align: center;
+    padding-top: 20%;
+    padding-right: 15%;
+    padding-left: 15%;
+    margin-bottom: 10px;
+
+}
+
+.instagram_image{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+ul.insta_image{
+    list-style-type: none;
+    display: inline;
+}
+
+.list_one, .list_two{
+    padding: 0 15%;
+}
+
+li.insta_image_list{
+    display: inline;
+}
+
+.insta_list_image{
+    width: 11.87%;
+
+}
+

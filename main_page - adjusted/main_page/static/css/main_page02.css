@@ -1,0 +1,127 @@
+ /*셋째 줄*/
+.product_bar {
+  height: 52px;
+ width: 100%;
+}
+ .product_category {
+  border-bottom: black 2px solid;
+  height: 100%;
+  margin: 0 15%;
+}
+
+ .product_category li{
+   list-style: none;
+   color: black;
+   float: left;
+   vertical-align: middle;
+   text-align: center;
+   line-height: 52px;
+  position: relative;
+ }
+
+
+.product_category .product_menu{
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  width: 123px;
+  margin-left: 0px;
+  font-size: 12px;
+}
+
+
+.product_category li .product_menu:hover{
+  color: orange;
+}
+
+
+.product_menu, .product_submenu{
+ display: block;
+ list-style-type: none;
+ width: 123px;
+}
+
+
+.submenu{
+ position: absolute;
+ height: 0px;
+ overflow: hidden;
+ width: 100%;
+ z-index: 2;
+}
+
+.submenu li{
+ display: inline-block;
+}
+
+.product_category:hover .submenu{
+ padding-top: 52px;
+    padding-bottom: 200px;
+    max-height: 260px;
+ margin-top: 52px;
+width: 70%;
+    /*이하로/// 서브메뉴 길이에 문제있으면 여기 위드 수정해주ㅓ야함,*/
+ background-color: white;
+ border-top: 2px solid black;
+ border-bottom: 2px solid black;
+ -webkit-transition: height .2s;
+}
+
+/*li .product_submenu{*/
+ /*display: block;*/
+ /*padding-left: 50px;*/
+ /*width: 100px;*/
+/*}*/
+
+
+.product_submenu:hover{
+ color: orange;
+}
+
+.submenu_image{
+ display: inline-block;
+ width: 100%;
+}
+
+.submenu_image, .submenu_exp{
+    padding-left: 25%;
+    padding-right: 25%;
+    max-width: 1300px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+li .product_submenu{
+ display: inline-block;
+    width: 100%;
+    margin-left: 35px;
+    border-left: 1px solid lightgray;
+    text-align: center;
+}
+
+#submenu_first{
+    border-left: transparent;
+}
+
+/*.product_submenu{*/
+    /*padding-left: 25%;*/
+/*}*/
+.submenu_image{
+    display: flex;
+    align-items: center;
+}

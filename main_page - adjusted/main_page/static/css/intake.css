@@ -1,0 +1,144 @@
+
+
+
+ /*notice*/
+
+.notice{
+  width: 33%;
+  border: 1px solid lightgray;
+    background-color: white;
+    display: inline-block;
+    float: left;
+    height: 260px;
+}
+
+.notice_title{
+  text-align: center;
+  width: 100%;
+    padding: 30px;
+}
+
+.notice_list_style{
+    list-style-type: none;
+}
+
+.notice_list{
+  width: 70%;
+  display: inline-block;
+    font-size: 11px;
+    margin-left: 7px;
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.notice_date{
+  display: inline;
+    font-size: 11px;
+    padding: 10px;
+    width: 30%;
+    color: gray;
+}
+
+
+
+
+ /*magazine*/
+
+ .magazine{
+  width: 33%;
+  border: 1px solid lightgray;
+    background-color: white;
+    display: inline-block;
+     float: left;
+     margin-left: 4px;
+     height: 260px;
+
+}
+ .magazine_title{
+     padding: 35px;
+     width: 100%;
+     text-align: center;
+ }
+
+
+ .magazine_image{
+     padding-bottom: 60px;
+     padding-left: 20px;
+     padding-right: 20px;
+     float: left;
+ }
+
+ .magazine_text{
+     float: left;
+ }
+
+ .magazine_sentence{
+     color: gray;
+     float: left;
+ }
+
+
+
+
+ /*cscenter*/
+ .cscenter {
+     width: 33%;
+     border: 1px solid lightgray;
+     background-color: white;
+     display: inline-block;
+     float: left;
+     margin-left: 4px;
+     height: 260px;
+ }
+
+
+ .cscenter_title{
+     text-align: center;
+    width: 100%;
+     padding: 35px;
+ }
+
+ .cscenter_number{
+     width: 100%;
+     text-align: center;
+     font-size: 60px;
+     margin-top: -20px;
+ }
+
+ .cscenter_menu_title{
+     width: 20%;
+     padding-left: 20px;
+     display: inline-block;
+     font-size: 10px;
+ }
+
+ .cscenter_menu_content{
+     font-size: 10px;
+     width: 25%;
+     display: inline-block;
+ }
+
+
+ .cscenter_holiday{
+     font-size: 10px;
+     padding-left: 20px;
+     padding-top: 15px;
+ }
+
+
+
+ /*quickbar*/
+ .quickbar{
+  position: absolute;
+  right: 46px;
+  top: 973px;
+  width: 96px;
+  z-index: 90;
+ }
+
+ .quickbar_text{
+  position: relative;
+   margin: auto;
+ }
+
+
