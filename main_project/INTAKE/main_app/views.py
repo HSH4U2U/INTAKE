@@ -21,12 +21,10 @@ def main_page(request):
         }
         return render(request, 'main_app/category.html', ctx)
     else:
-        ctx = {}
-        main_products = []
-        for pk in range(1, Product.objects.count() + 1):
-            main_product = get_object_or_404(Product, pk=pk)
-            main_products.append(main_product)
-            ctx['product'+str(pk)] = main_products[pk-1]
+        main_products = Product.objects.filter(category__pk=1)  # 밀스라이트 제품만 따옴
+        ctx = {
+            'products': main_products,
+        }
         return render(request, 'main_app/main_page.html', ctx)
 
 

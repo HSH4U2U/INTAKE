@@ -105,10 +105,7 @@
     <nav>
       <div class="product_bar">
        <ul class="product_category">
-
          <li><img src="{% static 'images/menu.png' %}" height="100%"></li>
-
-
          <li><a href ="#" class="product_menu">밀스</a></li>
             <ul class="submenu">
               <li> <a href="#" class="product_submenu" id="submenu_first"><img src="{% static 'images/subimage01.jpg' %}" class="submenu_image"><p class="submenu_exp">밀스드링크</p></a></li>
@@ -117,30 +114,13 @@
               <li> <a href="#" class="product_submenu"><img src="{% static 'images/subimage04.jpg' %}" class="submenu_image"><p class="submenu_exp">밀스드링크</p></a></li>
               <li> <a href="#" class="product_submenu"><img src="{% static 'images/subimage05.jpg' %}" class="submenu_image"><p class="submenu_exp">밀스드링크</p> </a></li>
             </ul>
-
-
-
          <li><a href ="#" class="product_menu">아침간편식</a></li>
-
-
          <li><a href ="#" class="product_menu">한끼</a></li>
-
-
          <li><a href ="#" class="product_menu">간식/음료</a></li>
-
-
          <li><a href ="#" class="product_menu">서플리먼트</a></li>
-
-
          <li><a href ="#" class="product_menu">다이어트/스포츠</a></li>
-
-
          <li><a href ="#" class="product_menu">이벤트</a></li>
-
-
          <li><a href ="#" class="product_menu">고객센터</a></li>
-
-
        </ul>
       </div>
     </nav>
@@ -176,80 +156,76 @@
       <div class="products">
 
         {#            이하로 subslider#}
-            <div class="subslider">
+       <div class="subslider">
 {#              끝#}
 
 
-{#              상품1#}
-          <a href="#">
-              <div class="product">
-                <div>
-                  <img src="{% static 'images/submenu.jpg' %}">
+  {#              상품1#}
+            <a href="#">
+                <div class="product">
+                  <div>
+                    <img src="{% static 'images/submenu.jpg' %}">
+                  </div>
+                  <div class="product_detail_contents">
+                    <p>product1.product_name</p>
+                    <span class="x">fo.product1.product_price_before 원</span><span>product1.product_price 원</span>
+                  </div>
                 </div>
+            </a>
 
 
-                <div class="product_detail_contents">
-                  <p>product1.product_name</p>
-                  <span class="x">fo.product1.product_price_before 원</span><span>product1.product_price 원</span>
-                  </div>
-                  </div>
-          </a>
+  {#            상품2#}
 
 
-{#            상품2#}
-
-
-              <a href="#">
-                    <div class="product">
-                      <div>
-                         <img src="{% static 'images/submenu02.jpg' %}">
-                      </div>
-
-
-                    <div class="product_detail_contents">
-                      <p> product2.product_name </p>
-                      <span class="x">product2.product_price_before 원</span><span> product2.product_price 원</span>
-                      </div>
-                    </div>
-              </a>
-
-
-
-
-{#              상뭎3#}
-         <a href="#">
-                  <div class="product">
-                    <div>
-                      <img src="{% static 'images/submenu.jpg' %}">
-                    </div>
+                <a href="#">
+                      <div class="product">
+                        <div>
+                           <img src="{% static 'images/submenu02.jpg' %}">
+                        </div>
 
 
                       <div class="product_detail_contents">
-                      <p> product3.product_name </p>
-                      <span class="x"> product3.product_price_before 원</span><span> product3.product_price 원</span>
+                        <p> product2.product_name </p>
+                        <span class="x">product2.product_price_before 원</span><span> product2.product_price 원</span>
+                        </div>
                       </div>
-                  </div>
-        </a>
+                </a>
 
 
 
-{#              상품4#}
-         <a href="#">
+
+  {#              상뭎3#}
+           <a href="#">
                     <div class="product">
                       <div>
-                        <img src="{% static 'images/submenu02.jpg' %}">
+                        <img src="{% static 'images/submenu.jpg' %}">
                       </div>
 
 
                         <div class="product_detail_contents">
-                        <p>product4.product_name </p>
-                        <span class="x"> product4.product_price_before 원</span><span> product4.product_price 원</span>
+                        <p> product3.product_name </p>
+                        <span class="x"> product3.product_price_before 원</span><span> product3.product_price 원</span>
                         </div>
                     </div>
-        </a>
+          </a>
 
 
-      </div>
+
+  {#              상품4#}
+           <a href="#">
+                      <div class="product">
+                        <div>
+                          <img src="{% static 'images/submenu02.jpg' %}">
+                        </div>
+
+
+                          <div class="product_detail_contents">
+                          <p>product4.product_name </p>
+                          <span class="x"> product4.product_price_before 원</span><span> product4.product_price 원</span>
+                          </div>
+                      </div>
+          </a>
+       </div>
       </div>
 
 
@@ -271,62 +247,45 @@
        {#기존 홈페이지 값 width: 340px, 	height:216px;기 때문에 해당 박스는 height width값 지정해서 만들어짐#}
 
 
-       <br><br><br><br>
+    <br><br><br><br>
+    <div>
+      <div class="notice">
+        <h3 class="notice_title"><b>NOTICE</b></h3>
+        <ul class="notice_list_style">
+          <li><div class="notice_list">18년 8월 인테이크 회원 구매 금액별 혜택</div><p class="notice_date">2018.08.03</p></li>
+          <li><div class="notice_list">고객센터 운영시간 변경안내</div><p class="notice_date">2018.07.16</p></li>
+          <li><div class="notice_list">3rd notice</div><p class="notice_date">2018.22.23</p></li>
+          <li><div class="notice_list">4th notice-shipping</div><p class="notice_date">2018.08.22</p></li>
+          <li><div class="notice_list"> 5th notice-bonus</div><p class="notice_date">2014.02.33</p></li>
+        </ul>
+      </div>
 
+      <div class="magazine">
+       <h3 class="magazine_title"><b>MAGAZINE</b></h3>
+        <img src="{% static 'images/magazine01.jpg' %}" class="magazine_image">
+       <p class="magazine_text"> 맛있는 카스테라<br>
+       <br><br><p class="magazine_sentence">정말 맛있겠다!</p></div>
+      </div>
 
-        <div>
-          <div class="notice">
-            <h3 class="notice_title"><b>NOTICE</b></h3>
-            <ul class="notice_list_style">
-              <li><div class="notice_list">18년 8월 인테이크 회원 구매 금액별 혜택</div><p class="notice_date">2018.08.03</p></li>
-              <li><div class="notice_list">고객센터 운영시간 변경안내</div><p class="notice_date">2018.07.16</p></li>
-              <li><div class="notice_list">3rd notice</div><p class="notice_date">2018.22.23</p></li>
-              <li><div class="notice_list">4th notice-shipping</div><p class="notice_date">2018.08.22</p></li>
-              <li><div class="notice_list"> 5th notice-bonus</div><p class="notice_date">2014.02.33</p></li>
-            </ul>
-        </div>
+      <div class="cscenter">
+        <h3 class="cscenter_title"><b>CS CENTER</b></h3>
+        <h1 class="cscenter_number"><b>1644-1567</b></h1>
+        {#         p 2줄=한세트라고 읽어줘야함!#}
+        <p class="cscenter_menu_title">운영시간</p>
+        <p class="cscenter_menu_content">09:30 ~ 18:00</p>
 
+        <p class="cscenter_menu_title">이메일</p>
+        <p class="cscenter_menu_content">cs@intakefoods.kr</p>
 
+        <p class="cscenter_menu_title">점심시간</p>
+        <p class="cscenter_menu_content">09:30 ~ 18:00</p>
 
-         <div class="magazine">
-           <h3 class="magazine_title"><b>MAGAZINE</b></h3>
-            <img src="{% static 'images/magazine01.jpg' %}" class="magazine_image">
-           <p class="magazine_text"> 맛있는 카스테라<br>
-           <br><br><p class="magazine_sentence">정말 맛있겠다!</p></div>
-         </div>
+        <p class="cscenter_menu_title">카카오톡</p>
+        <p class="cscenter_menu_content">@intakefoods</p>
 
-
-
-
-       <div class="cscenter">
-            <h3 class="cscenter_title"><b>CS CENTER</b></h3>
-         <h1 class="cscenter_number"><b>1644-1567</b></h1>
-
-{#         p 2줄=한세트라고 읽어줘야함!#}
-         <p class="cscenter_menu_title">운영시간</p>
-         <p class="cscenter_menu_content">09:30 ~ 18:00</p>
-
-
-          <p class="cscenter_menu_title">이메일</p>
-         <p class="cscenter_menu_content">cs@intakefoods.kr</p>
-
-
-          <p class="cscenter_menu_title">점심시간</p>
-         <p class="cscenter_menu_content">09:30 ~ 18:00</p>
-
-
-          <p class="cscenter_menu_title">카카오톡</p>
-         <p class="cscenter_menu_content">@intakefoods</p>
-
-
-         <p class="cscenter_holiday">토, 일, 공휴일 휴무</p>
-
-        </div>
-
-
-
-
-        </div>
+        <p class="cscenter_holiday">토, 일, 공휴일 휴무</p>
+      </div>
+    </div>
 
 
 

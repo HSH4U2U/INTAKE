@@ -6,6 +6,65 @@
   <meta charset="UTF-8">
   <title>INTAKE | 인테이크</title>
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+
+{#이하로 삽입한 css, script#}
+
+  <link rel="stylesheet" href="{% static 'images/jquery.bxslider.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+   <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+        auto: true,
+        speed: 500,
+        pause: 2000,
+        mode:'horizontal',
+        infiniteLoop: true,
+        autoHover: true,
+        minSlides: 1,
+        maxSlides: 1,
+        pager: true,
+        controls: true,
+     });
+
+    $('.subslider').bxSlider({
+        slideWidth: 318,
+        slideMargin: 2,
+        auto: true,
+        speed: 500,
+        pause: 2000,
+        mode:'horizontal',
+        infiniteLoop: true,
+        autoHover: true,
+        minSlides: 4,
+        maxSlides: 4,
+        moveSlides: 3,
+        pager: false,
+        controls: true,
+        nexttext: '>',
+        prevText: '<',
+        nextSelector: '#slider-next',
+        prevSelector: '#slider-prev',
+      });
+        // controls=true가 좌우 버튼값이 보이게 하는게 맞는데
+        // 이유는 모르겠고 그냥 안댐.ㅠㅠㅠㅠ 만약 된다면 nexttext prevtext로 적용할수 있는건지도 모르겠음잘....
+
+    $('#mainslide').bxSlider({
+      nextSelector: '#slider-next',
+      prevSelector: '#slider-prev',
+      nextText: '<img src="iimages/lightarrow.png" %}" />',
+      prevText: '<img src="iimages/leftarrow.png" %}" />'    });
+   $(function() {
+   $(window).scroll(function() {
+   var top = $(window).scrollTop();
+   $(".quickbar").animate({"top" : top + 100 + "px"}, 100);
+  });
+  $(".quickbar").click(function() { $("html,body").animate({scrollTop:0}, 10); });
+ });
+ });
+
+</script>
 </head>
 <body>
   <!-- 위 3줄 + nav_bar -->
@@ -58,9 +117,26 @@
       </div>
     </div>
 
-    <div class="product_bar">
-      <div class="product_category"></div>
-    </div>
+    <nav>
+      <div class="product_bar">
+        <ul class="product_category">
+          <li><img src="{% static 'images/menu.png' %}" height="100%"></li>
+          <li><a href ="#" class="product_menu">밀스</a></li>
+            <ul class="submenu">
+              <li> <a href="#" class="product_submenu" id="submenu_first"><img src="{% static 'images/subimage01.jpg' %}" class="submenu_image"><p class="submenu_exp">밀스드링크</p></a></li>
+              <li> <a href="#" class="product_submenu"><img src="{% static 'images/subimage02.jpg' %}" class="submenu_image"><p class="submenu_exp">밀스드링크</p></a></li>
+              <li> <a href="#" class="product_submenu"><img src="{% static 'images/subimage03.jpg' %}" class="submenu_image"><p class="submenu_exp">밀스드링크</p></a></li>
+              <li> <a href="#" class="product_submenu"><img src="{% static 'images/subimage04.jpg' %}" class="submenu_image"><p class="submenu_exp">밀스드링크</p></a></li>
+            </ul>
+          <li><a href ="#" class="product_menu">아침간편식</a></li>
+          <li><a href ="#" class="product_menu">한끼</a></li>
+          <li><a href ="#" class="product_menu">간식/음료</a></li>
+          <li><a href ="#" class="product_menu">서플리먼트</a></li>
+          <li><a href ="#" class="product_menu">다이어트/스포츠</a></li>
+          <li><a href ="#" class="product_menu">이벤트</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <div class="nav_bar"></div>
   </div>

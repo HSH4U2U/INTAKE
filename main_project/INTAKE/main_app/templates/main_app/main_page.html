@@ -7,7 +7,13 @@
    <!-- section -->
   <div class="section">
      <!-- sectoon1 -->
-    <div class="main_image"><img src="{% static 'main_app/images/main1.jpg' %}" height="100%"></div>
+    <div class="main_image">
+      <ul class="slider" id="main_slide">
+        <li><img src="{% static 'images/main01.jpg' %}" width="100%"></li>
+        <li><img src="{% static 'images/main02.jpg' %}" width="100%"></li>
+        <li><img src="{% static 'images/main03.jpg' %}" width="100%"></li>
+      </ul>
+    </div>
     <div class="product_introduction1">
       <div class="helper"></div> <div>
       <div>Do not eat, Do intake!</div>
@@ -22,62 +28,23 @@
     <div class="product_introduction2">
       <div><span>INTAKE</span><span> </span><span style="font-weight: bold">MEAL</span></div>
       <div class="products">
-        <a href="{% url "main_app:product" pk=1 %}">
-          <div class="product">
-            <div>
-              <img src="{{ product1.product_image.url }}">
-            </div>
-            <div>
-              <div class="product_detail_contents">
-              <p>{{ product1.product_name }}</p>
-              <span class="x">{{ product1.product_price_before }}원</span><span>{{ product1.product_price }}원</span>
+        <div class="subslider">
+          {% for product in products %}
+             <a href="{% url "main_app:product" pk=product.pk %}">
+              <div class="product">
+                <div>
+                  <img src="{{ product.product_image.url }}">
+                </div>
+                <div>
+                  <div class="product_detail_contents">
+                  <p>{{ product.product_name }}</p>
+                  <span class="x">{{ product.product_price_before }}원</span><span>{{ product.product_price }}원</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </a>
-
-        <a href="{% url "main_app:product" pk=2 %}">
-          <div class="product">
-            <div>
-              <img src="{{ product2.product_image.url }}">
-            </div>
-            <div>
-              <div class="product_detail_contents">
-              <p>{{ product2.product_name }}</p>
-              <span class="x">{{ product2.product_price_before }}원</span><span>{{ product2.product_price }}원</span>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <a href="{% url "main_app:product" pk=3 %}">
-          <div class="product">
-            <div>
-              <img src="{{ product3.product_image.url }}">
-            </div>
-            <div>
-              <div class="product_detail_contents">
-              <p>{{ product3.product_name }}</p>
-              <span class="x">{{ product3.product_price_before }}원</span><span>{{ product3.product_price }}원</span>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <a href="{% url "main_app:product" pk=5 %}">
-          <div class="product">
-            <div>
-              <img src="{{ product5.product_image.url }}">
-            </div>
-            <div>
-              <div class="product_detail_contents">
-              <p>{{ product5.product_name }}</p>
-              <span class="x">{{ product5.product_price_before }}원</span><span>{{ product5.product_price }}원</span>
-              </div>
-            </div>
-          </div>
-        </a>
-
+            </a>
+          {% endfor %}
+        </div>
       </div>
     </div>
 
@@ -91,8 +58,17 @@
       <div style="background-color: orange; height: 500px"></div>
     </div>
 
-    <div class="notice_magazine_cs-center"></div>
-    <div class="instagram"></div>
+       <!-- notice -->
+
   </div>
+
+     <!-- quickbar -->
+    <div class="quickbar">
+      <a href="#" class="quickbar_menu"><img src="{% static 'images/quick01.jpg' %}"></a>
+      <a href="#" class="quickbar_menu"><img src="{% static 'images/quick02.png' %}"></a>
+      <a href="#" class="quickbar_text"></a>
+      <a href="#" class="quickbar_menu"><img src="{% static 'images/quick03.jpg' %}"></a>
+      <a href="#" class="quickbar_menu"><img src="{% static 'images/quick04.png' %}"></a>
+    </div>
 
 {% endblock %}

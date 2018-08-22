@@ -23,12 +23,13 @@ a {
 }
 
 /*section1*/
-.main_image {
-}
-
 .main_image img {
   width: 100%;
-  height: 100%;
+}
+
+ /*이하로 삽입*/
+.slider{
+  z-index: 1;
 }
 
 .product_introduction1 {
@@ -133,11 +134,27 @@ a {
   text-align: center;
 }
 
+/*notice*/
 
-.notice_magazine_cs-center {
-
-}
 
 .instagram {
 
+}
+
+ /*quickbar*/
+.quickbar{
+  position: absolute;
+  right: 46px;
+  top: 973px;
+  width: 80px;
+  z-index: 90;
+ }
+
+.quickbar_text{
+  position: relative;
+  margin: auto;
+ }
+
+.quickbar_menu img {
+  width: 60px;
 }
