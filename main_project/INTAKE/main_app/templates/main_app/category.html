@@ -21,7 +21,28 @@
   <div class="category_title">
     {% if category %}
       <div>밀스 라이트 / <b>MEALS LIGHT</b></div>
-      <div>input/ 선택하면 해당 카테고리로</div>
+      <div>
+{#        <form action="" method="GET">#}
+{#          <input name="sort" list="order" placeholder="{{ sort_option }}">#}
+{#            <datalist id="order">#}
+{#            <option value="최신 상품순">#}
+{#            <option value="댓글 수">#}
+{#            <option value="상품평순">#}
+{#            <option value="낮은 가격순">#}
+{#            <option value="높은 가격순">#}
+{#            </datalist>#}
+{#        </form>        #}
+        <form action="" method="GET">
+          <select name="sort" id="option" onchange="this.form.submit()">
+            <option value="최신 상품순">최신 상품순</option>
+            <option value="댓글 수">댓글 수</option>
+            <option value="상품평순">상품평순</option>
+            <option value="낮은 가격순">낮은 가격순</option>
+            <option value="높은 가격순">높은 가격순</option>
+          </select>
+          <noscript><input type="submit" value="Submit"></noscript>
+        </form>
+      </div>
     {% else %}
       <div style="margin-top: 50px"><b style="color: orange">"{{ search_term }}"</b>의 검색 결과</div><div></div>
     {% endif %}

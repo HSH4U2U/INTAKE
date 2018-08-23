@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import CommentForm
 from .models import Product, Comment, Category
-from django.db.models import Q
+from django.db.models import Q, Avg
 
 
 # Create your views here.
@@ -97,11 +97,38 @@ def category(request, pk):   # 여기서 pk는 category의 pk
         products = Product.objects.filter(category__pk=pk)
         # 해당 카테고리 받아오기
         category = products[0].category
-        ctx = {
-            'products': products,
-            'category': category,
-        }
-        return render(request, 'main_app/category.html', ctx)
+
+        # sort 구현
+        sort_option = "최신 상품순"
+        if "sort" in request.GET:
+            sort_option = request.GET["sort"]
+            if sort_option == "최신 상품순":
+                sorted_products = products
+            elif sort_option == "댓글 수":
+                sorted_products = sorted(products, key=lambda x: x.comment_set.count(), reverse=True)
+            elif sort_option == "상품평순":
+                sorted_products = sorted(products,
+                                         key=lambda x: x.comment_set.all().aggregate(Avg('star'))['star__avg'],
+                                         reverse=True)                # aggregate로 필드 내 요소들에 접근 가능!
+            elif sort_option == "낮은 가격순":
+                sorted_products = sorted(products, key=lambda x: x.product_price)
+            elif sort_option == "높은 가격순":
+                sorted_products = sorted(products, key=lambda x: x.product_price, reverse=True)
+            # else:
+            #     sorted_products = Product.objects.filter(category__pk=pk)
+            ctx = {
+                'products': sorted_products,
+                'sort_option': sort_option,
+                'category': category,
+            }
+            return render(request, 'main_app/category.html', ctx)
+        else:
+            ctx = {
+                'products': products,
+                'sort_option': sort_option,
+                'category': category,
+            }
+            return render(request, 'main_app/category.html', ctx)
 
 
 def category_main(request):
@@ -111,4 +138,3 @@ def category_main(request):
         'categorys': categorys,
     }
     return render(request, 'main_app/category_main.html', ctx)
-
