@@ -21,9 +21,11 @@ def main_page(request):
         }
         return render(request, 'main_app/category.html', ctx)
     else:
-        main_products = Product.objects.filter(category__pk=1)  # 밀스라이트 제품만 따옴
+        main_products1 = Product.objects.filter(category__pk=1)  # 밀스라이트 제품만 따옴
+        main_products2 = Product.objects.filter(category__pk=2)  # 피로그래밍만 따옴
         ctx = {
-            'products': main_products,
+            'products1': main_products1,
+            'products2': main_products2,
         }
         return render(request, 'main_app/main_page.html', ctx)
 

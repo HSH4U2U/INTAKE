@@ -129,7 +129,11 @@ a {
 
 /* product_detail */
 .product_detail {
+  margin: 50px 25%;
+}
 
+.product_detail img {
+  width: 100%;
 }
 
 

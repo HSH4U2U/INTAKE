@@ -29,7 +29,30 @@
       <div><span>INTAKE</span><span> </span><span style="font-weight: bold">MEAL</span></div>
       <div class="products">
         <div class="subslider">
-          {% for product in products %}
+          {% for product in products1 %}
+             <a href="{% url "main_app:product" pk=product.pk %}">
+              <div class="product">
+                <div>
+                  <img src="{{ product.product_image.url }}">
+                </div>
+                <div>
+                  <div class="product_detail_contents">
+                  <p>{{ product.product_name }}</p>
+                  <span class="x">{{ product.product_price_before }}원</span><span>{{ product.product_price }}원</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="product_introduction2">
+      <div><span>P.</span><span> </span><span style="font-weight: bold">ROGRAMING</span></div>
+      <div class="products">
+        <div class="subslider">
+          {% for product in products2 %}
              <a href="{% url "main_app:product" pk=product.pk %}">
               <div class="product">
                 <div>
