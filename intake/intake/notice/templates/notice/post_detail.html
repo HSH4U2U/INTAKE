@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:notice="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ post.title }}</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static "notice/post_detail.css" %}" />
+</head>
+
+
+
+<body>
+
+
+
+
+      <table class="table table-hover table-bordered">
+        <thead>
+          <div class="divhead">
+            <tr class="notice_head">
+              <th class="num">#</th>
+              <th class="title">제목</th>
+              <th class="date">날짜</th>
+            </tr>
+          </div>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td>{{post.pk}}</td>
+
+
+
+        </tr>
+        </tbody>
+
+      </table>
+
+
+      {{post.pk}}<a><h1>{{ post.title }}</h1></a>
+
+      {{ post.content|linebreaks }}
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+{{ post.content|linebreaks }}
+
+<a href="{% url "notice:post_list" %}" class="btn btn-primary">목록으로</a>
+
+
+</body>
+</html>
