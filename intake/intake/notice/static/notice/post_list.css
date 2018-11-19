@@ -1,0 +1,59 @@
+div.notice_tab ul li {
+ display: inline-block;
+ margin: 0 30px;
+}
+
+
+div.graybar{
+    background-color:#666666;
+    padding: 22px 0;
+
+}
+
+.notice ul li {
+    overflow: hidden;
+}
+
+div.notice_tab ul {
+    margin-bottom: 50px;
+    overflow: hidden;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    padding: 15px 0;
+    text-align: Center;
+}
+
+
+.notice_head{
+    color: #000000;
+    font-size: 17px;
+    height: 50px;
+    padding: 22px 22px;
+    background: #eeeeee;
+    text-align: Center;
+    width: 935px;
+}
+
+.texttitle{
+    text-decoration: none;
+    font-family: 'Spoqa Han Sans', 'SansSerif';
+	padding:10px 0;
+	font-size:12px;
+	color:#6555;
+    font-weight: 400;
+}
+
+.textid{
+    text-align: center;
+}
+
+.on{
+    color:black;
+	display: inline;
+	padding: 0 20px;
+}
+
+.num{
+	width:90px;
+}
+
