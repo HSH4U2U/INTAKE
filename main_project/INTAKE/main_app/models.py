@@ -10,8 +10,6 @@ class Category(models.Model):
     def __str__(self):
         return self.category_name
 
-    def __str__(self):
-        return self.category_name
 
 
 class Product(models.Model):
@@ -23,7 +21,7 @@ class Product(models.Model):
     product_register = models.DateTimeField(auto_now_add=True, verbose_name='상품 등록일')
     product_detail = models.TextField(verbose_name='상품 설명')
 
-    # 핳인률 계산
+    # 할인률 계산
     def product_sale(self):
         product_sale = int(100 - 100 * int(self.product_price) / int(self.product_price_before))
         return product_sale
